@@ -11,8 +11,8 @@ namespace Cat_Or_Dog.Controllers
     public class API : ControllerBase
     {
         [HttpGet]
-        public string Get() {
-            return "Hello world";
+        public string Get(int score, string seed) {
+            return Decider.Decide(score, seed);
         }
     }
 }
